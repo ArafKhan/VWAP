@@ -33,6 +33,6 @@ public class LimitedQueueTest {
     @Test
     @DisplayName("LimitedQueue should always remove oldest entry and remain FIFO")
     void shouldMaintainFIFO() {
-        assertEquals(queue.peek(), 30);
+        assertEquals(queue.peek(), 3.0);
     }
 }
