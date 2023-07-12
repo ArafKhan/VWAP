@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LimitedQueueTest {
 
-    Queue<Double> queue = new LimitedQueue<Double>(5);
+    Queue<Double> queue = new LimitedQueue<>(5);
 
     @BeforeEach
     void s() {

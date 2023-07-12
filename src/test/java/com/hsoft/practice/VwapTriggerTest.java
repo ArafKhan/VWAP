@@ -18,10 +18,10 @@ public class VwapTriggerTest {
   @Test
   @DisplayName("computeVwap() should compute correct Vwap")
   void shouldComputeCorrectVwap() {
-    Queue<Transaction> queue = new LinkedList<Transaction>();
-    queue.add(new Transaction((long)1000,100.0));
-    queue.add(new Transaction((long)2000,101.0));
-    queue.add(new Transaction((long)3000,102.0));
+    Queue<Transaction> queue = new LinkedList<>();
+    queue.add(new Transaction(1000,100.0));
+    queue.add(new Transaction(2000,101.0));
+    queue.add(new Transaction(3000,102.0));
     assertEquals(vwapTrigger.computeVwap(queue), 101.33333333333333);
   }
 
