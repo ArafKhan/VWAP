@@ -10,23 +10,17 @@ public class LimitedQueue<E> extends ConcurrentLinkedQueue<E> {
     }
 
     @Override
-    public boolean add(E e) {
-        synchronized (this) {
-            super.add(e);
-            while (size() > limit) { super.remove(); }
-            return true;
-        }
+    public synchronized boolean add(E e) {
+        super.add(e);
+        while (size() > limit) { super.remove(); }
+        return true;
     }
 
     @Override
-    public boolean offer(E e) {
-        synchronized (this) {
-            super.offer(e);
-            while (size() > limit) {
-                super.remove();
-            }
-            return true;
-        }
+    public synchronized boolean offer(E e) {
+        super.offer(e);
+        while (size() > limit) { super.remove(); }
+        return true;
     }
 
 }

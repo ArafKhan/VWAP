@@ -36,7 +36,7 @@ public class ExpectationTest {
     a(1);
   }
 
-  @RepeatedTest(5)
+  @RepeatedTest(1000)
   @Timeout(value = 1, unit = TimeUnit.MINUTES, threadMode = Timeout.ThreadMode.SAME_THREAD)
   public void multiThreaded() {
     a(4);
